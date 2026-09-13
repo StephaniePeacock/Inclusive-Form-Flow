@@ -1,32 +1,31 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Field Inventory</title>
         <style>
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.5;
-                max-width: 80rem;
-                margin: auto;
-                padding: 1rem;
-                color: #191919;
-            }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            th,
-            td {
-                padding: 0.6rem;
-                border: 1px solid #999;
-                text-align: left;
-                vertical-align: top;
-            }
-            th {
-                background: #f1f1f1;
-            }
+        body{
+            font-family:Arial,sans-serif;
+            line-height:1.5;
+            max-width:80rem;
+            margin:auto;
+            padding:1rem;
+            color:#191919;
+        }
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+        th,td{
+            padding:.6rem;
+            border:1px solid #999;
+            text-align:left;
+            vertical-align:top;
+        }
+        th{
+            background:#f1f1f1;
+        }
         </style>
     </head>
     <body>
@@ -47,327 +46,154 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Your Name</td>
-                    <!-- visible label/question -->
-                    <td>So we know why the inquiry is from</td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>input text</td>
-                    <!-- Native control/type -->
-                    <td>name= user text</td>
-                    <!-- Submitted name/value -->
-                    <td>autocomplete="name"</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>none - placeholder sample text</td>
-                    <!-- Constraint/instruction -->
-                    <td>low sensitivity - must know who the adopter is</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Your Name</td> <!-- visible label/question -->
+                    <td>So we know why the inquiry is from</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>input text</td><!-- Native control/type -->
+                    <td>name= user text</td><!-- Submitted name/value -->
+                    <td>autocomplete="name"</td><!-- Autocomplete/inputmode -->
+                    <td>none - placeholder sample text</td><!-- Constraint/instruction -->
+                    <td>low sensitivity - must know who the adopter is</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Email</td>
-                    <!-- visible label/question -->
-                    <td>So we can contact the individual</td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>input email</td>
-                    <!-- Native control/type -->
-                    <td>name= user email</td>
-                    <!-- Submitted name/value -->
-                    <td>autocomplete="email"</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>browser email validation - placeholder sample text</td>
-                    <!-- Constraint/instruction -->
-                    <td>
-                        medium sensitivity - must know how to contact the
-                        adopter
-                    </td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Email</td> <!-- visible label/question -->
+                    <td>So we can contact the individual</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>input email</td><!-- Native control/type -->
+                    <td>name= user email</td><!-- Submitted name/value -->
+                    <td>autocomplete="email"</td><!-- Autocomplete/inputmode -->
+                    <td>browser email validation - placeholder sample text</td><!-- Constraint/instruction -->
+                    <td>medium sensitivity - must know how to contact the adopter</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Phone Number</td>
-                    <!-- visible label/question -->
-                    <td>So we can contact the individual</td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>input tel</td>
-                    <!-- Native control/type -->
-                    <td>name= user phone</td>
-                    <!-- Submitted name/value -->
-                    <td>autocomplete="tel"</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>none - placeholder sample text</td>
-                    <!-- Constraint/instruction -->
-                    <td>
-                        personal information - must know how to contact the
-                        adopter
-                    </td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Phone Number</td> <!-- visible label/question -->
+                    <td>So we can contact the individual</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>input tel</td><!-- Native control/type -->
+                    <td>name= user phone</td><!-- Submitted name/value -->
+                    <td>autocomplete="tel"</td><!-- Autocomplete/inputmode -->
+                    <td>none - placeholder sample text</td><!-- Constraint/instruction -->
+                    <td>personal information - must know how to contact the adopter</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Preferred Contact Method</td>
-                    <!-- visible label/question -->
-                    <td>So we can contact the individual</td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>Radio</td>
-                    <!-- Native control/type -->
-                    <td>contact=email or contact=phone</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>none</td>
-                    <!-- Constraint/instruction -->
-                    <td>
-                        no sensitivity - must know how to contact the adopter
-                    </td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Preferred Contact Method</td> <!-- visible label/question -->
+                    <td>So we can contact the individual</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>Radio</td><!-- Native control/type -->
+                    <td>contact=email or contact=phone</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>none</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - must know how to contact the adopter</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Pet type you are interested in adopting</td>
-                    <!-- visible label/question -->
-                    <td>
-                        For filtering pets to match the adopter's preferences
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>Radio</td>
-                    <!-- Native control/type -->
-                    <td>pet-type=dog or pet-type=cat</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>none</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for filtering purposes only</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Pet type you are interested in adopting</td> <!-- visible label/question -->
+                    <td>For filtering pets to match the adopter's preferences</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>Radio</td><!-- Native control/type -->
+                    <td>pet-type=dog or pet-type=cat</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>none</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for filtering purposes only</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Do you have a specific pet in mind?</td>
-                    <!-- visible label/question -->
-                    <td>
-                        toggles form field visibility for following
-                        question/fieldsets
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>Radio</td>
-                    <!-- Native control/type -->
-                    <td>specific-pet=yes or specific-pet=no</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>none</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for toggling visibility</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Do you have a specific pet in mind?</td> <!-- visible label/question -->
+                    <td>toggles form field visibility for following question/fieldsets</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>Radio</td><!-- Native control/type -->
+                    <td>specific-pet=yes or specific-pet=no</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>none</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for toggling visibility</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Enter pet id number</td>
-                    <!-- visible label/question -->
-                    <td>
-                        question only visible if user selected yes to
-                        specific-pet - we need to know the pet they want
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>No</td>
-                    <!-- Required? -->
-                    <td>input number</td>
-                    <!-- Native control/type -->
-                    <td>pet-id=number</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>number > 0 and < 100</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for collecting a specific value</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Enter pet id number</td> <!-- visible label/question -->
+                    <td>question only visible if user selected yes to specific-pet - we need to know the pet they want</td><!-- Why necessary now? -->
+                    <td>No</td><!-- Required? -->
+                    <td>input number</td><!-- Native control/type -->
+                    <td>pet-id=number</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>number > 0 and < 100</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for collecting a specific value</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Gender</td>
-                    <!-- visible label/question -->
-                    <td>
-                        fieldset only visible if user selected no to specific
-                        pet - filtering of available pets
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>No</td>
-                    <!-- Required? -->
-                    <td>checkbox</td>
-                    <!-- Native control/type -->
-                    <td>pet-gender=male or pet-gender=female</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>Select all that apply</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for filtering available options</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Gender</td> <!-- visible label/question -->
+                    <td>fieldset only visible if user selected no to specific pet - filtering of available pets</td><!-- Why necessary now? -->
+                    <td>No</td><!-- Required? -->
+                    <td>checkbox</td><!-- Native control/type -->
+                    <td>pet-gender=male or pet-gender=female</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>Select all that apply</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for filtering available options</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Age</td>
-                    <!-- visible label/question -->
-                    <td>
-                        fieldset only visible if user selected no to specific
-                        pet - filtering of available pets
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>No</td>
-                    <!-- Required? -->
-                    <td>checkbox</td>
-                    <!-- Native control/type -->
-                    <td>
-                        pet-age=baby / pet-age=young-adult / pet-age=adult /
-                        pet-age=senior
-                    </td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>Select all that apply</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for filtering available options</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Age</td> <!-- visible label/question -->
+                    <td>fieldset only visible if user selected no to specific pet - filtering of available pets</td><!-- Why necessary now? -->
+                    <td>No</td><!-- Required? -->
+                    <td>checkbox</td><!-- Native control/type -->
+                    <td>pet-age=baby / pet-age=young-adult / pet-age=adult / pet-age=senior</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>Select all that apply</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for filtering available options</td><!-- Sensitivity and minimization decision -->  
                 </tr>
                 <tr>
-                    <td>Fur length</td>
-                    <!-- visible label/question -->
-                    <td>
-                        fieldset only visible if user selected no to specific
-                        pet - filtering of available pets
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>No</td>
-                    <!-- Required? -->
-                    <td>checkbox</td>
-                    <!-- Native control/type -->
-                    <td>
-                        fur-length=short / fur-length=medium / fur-length=long
-                    </td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>Select all that apply</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for filtering available options</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Fur length</td> <!-- visible label/question -->
+                    <td>fieldset only visible if user selected no to specific pet - filtering of available pets</td><!-- Why necessary now? -->
+                    <td>No</td><!-- Required? -->
+                    <td>checkbox</td><!-- Native control/type -->
+                    <td>fur-length=short / fur-length=medium / fur-length=long</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>Select all that apply</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for filtering available options</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Temperment</td>
-                    <!-- visible label/question -->
-                    <td>
-                        fieldset only visible if user selected no to specific
-                        pet - filtering of available pets
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>No</td>
-                    <!-- Required? -->
-                    <td>checkbox</td>
-                    <!-- Native control/type -->
-                    <td>
-                        temperament=friendly / temperament=shy /
-                        temperament=energetic / temperament=calm
-                    </td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>Select all that apply</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for filtering available options</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Temperment</td> <!-- visible label/question -->
+                    <td>fieldset only visible if user selected no to specific pet - filtering of available pets</td><!-- Why necessary now? -->
+                    <td>No</td><!-- Required? -->
+                    <td>checkbox</td><!-- Native control/type -->
+                    <td>temperament=friendly / temperament=shy / temperament=energetic / temperament=calm</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>Select all that apply</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for filtering available options</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Do you have any other pets at home?</td>
-                    <!-- visible label/question -->
-                    <td>
-                        fieldset is to ensure pet will be compatible in the
-                        household
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>Checkbox</td>
-                    <!-- Native control/type -->
-                    <td>
-                        other-pet=cat / other-pet=dog / other-pet=bird /
-                        other-pet=other
-                    </td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>Check all that apply</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for filtering available options</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Do you have any other pets at home?</td> <!-- visible label/question -->
+                    <td>fieldset is to ensure pet will be compatible in the household</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>Checkbox</td><!-- Native control/type -->
+                    <td>other-pet=cat / other-pet=dog / other-pet=bird / other-pet=other</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>Check all that apply</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for filtering available options</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Do you have children under 12 in the home?</td>
-                    <!-- visible label/question -->
-                    <td>
-                        fieldset is to ensure children will be safe and
-                        well-cared for
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>Radio</td>
-                    <!-- Native control/type -->
-                    <td>children=yes / children=no</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>none</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for filtering available options</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Do you have children under 12 in the home? </td> <!-- visible label/question -->
+                    <td>fieldset is to ensure children will be safe and well-cared for</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>Radio</td><!-- Native control/type -->
+                    <td>children=yes / children=no</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>none</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for filtering available options</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>Date Requested</td>
-                    <!-- visible label/question -->
-                    <td>to schedule meeting with adopter and pet</td>
-                    <!-- Why necessary now? -->
-                    <td>Yes</td>
-                    <!-- Required? -->
-                    <td>date</td>
-                    <!-- Native control/type -->
-                    <td>meeting-date=date entered</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>
-                        Date must be in the future - Please let us know the date
-                        you would like to come meet your future pet
-                    </td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for scheduling purposes</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Date Requested</td> <!-- visible label/question -->
+                    <td>to schedule meeting with adopter and pet</td><!-- Why necessary now? -->
+                    <td>Yes</td><!-- Required? -->
+                    <td>date</td><!-- Native control/type -->
+                    <td>meeting-date=date entered</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>Date must be in the future - Please let us know the date you would like to come meet your future pet</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for scheduling purposes</td><!-- Sensitivity and minimization decision --> 
                 </tr>
                 <tr>
-                    <td>
-                        Do you have any additional questions or comments that we
-                        can answer when we contact you?
-                    </td>
-                    <!-- visible label/question -->
-                    <td>
-                        To ensure we are prepared when contacting the adopter
-                    </td>
-                    <!-- Why necessary now? -->
-                    <td>No</td>
-                    <!-- Required? -->
-                    <td>textarea</td>
-                    <!-- Native control/type -->
-                    <td>comments=entered text</td>
-                    <!-- Submitted name/value -->
-                    <td>N/A</td>
-                    <!-- Autocomplete/inputmode -->
-                    <td>500 characters - none</td>
-                    <!-- Constraint/instruction -->
-                    <td>no sensitivity - for communication purposes</td>
-                    <!-- Sensitivity and minimization decision -->
+                    <td>Do you have any additional questions or comments that we can answer when we contact you?</td> <!-- visible label/question -->
+                    <td>To ensure we are prepared when contacting the adopter</td><!-- Why necessary now? -->
+                    <td>No</td><!-- Required? -->
+                    <td>textarea</td><!-- Native control/type -->
+                    <td>comments=entered text</td><!-- Submitted name/value -->
+                    <td>N/A</td><!-- Autocomplete/inputmode -->
+                    <td>500 characters - none</td><!-- Constraint/instruction -->
+                    <td>no sensitivity - for communication purposes</td><!-- Sensitivity and minimization decision --> 
                 </tr>
             </tbody>
         </table>
