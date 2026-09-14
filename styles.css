@@ -176,15 +176,15 @@ button:disabled{
 /* hide all the fields that rely on a specific check box*/
 .pet-id-field { display:none; }
 .pet-details-field { display:none; }
-.other-pet { display:none; }
+.other-pets-field { display:none; }
 /* show the hidden fields when these are checked */
 #specific-pet-yes:checked ~ .pet-id-field { display:block; }
-#specific-pet-no:checked ~ .pet-details-field { display:block; }
-#other-pet-yes:checked ~ .other-pet { display:block; }
+#specific-pet-no:checked ~ .pet-details-field { display:block; margin-top:var(--space-card); }
+#other-pet-yes:checked ~ .other-pets-field { display:block; margin-top:var(--space-card);}
 /* rehide the fields if they are unchecked */
 #specific-pet-no:not(:checked) ~ .pet-details-field { display:none; }
 #specific-pet-yes:not(:checked) ~ .pet-id-field { display:none; }
-#other-pet-no:not(:checked) ~ .other-pet { display:none; }
+#other-pet-no:checked ~ .other-pets-field { display:none; } 
 
 
 @media (min-width:48rem){
