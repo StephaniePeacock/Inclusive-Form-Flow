@@ -3,7 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Inclusive Form Flow</title><link rel="stylesheet" href="styles.css">
+        <title>Inclusive Form Flow</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header class="page-header">
@@ -25,98 +29,135 @@
                    <br>
                    Princess Donut's Royal Companions will never share your personal information with third parties.</p>
             </section>
-            <form action="" method="get">
-                <fieldset>
-                    <legend>F3 · Contact Information</legend>
-                    <p class="help" id="contact-info-help">Please tell us who you are and how we can reach you.</p>
+            <section>
+                <form action="" method="get">
+                    <fieldset>
+                        <legend>F3 · Contact Information</legend>
+                        <p class="help" id="contact-info-help">Please tell us who you are and how we can reach you.</p>
+                        <div class="field">
+                            <label for="name">Your Name<span class="required"> *</span></label>
+                            <input id="name" name="name" type="text" autocomplete="name" placeholder="Carl Crawler" aria-describedby="contact-info-help" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email Address<span class="required"> *</span></label>
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="crawler.carl@example.com" aria-describedby="contact-info-help" required>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone Number<span class="required"> *</span></label>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" aria-describedby="contact-info-help" required>
+                        </div>
+                        <div class="field">
+                            <p class="help" id="contact-method-help">Preferred Contact Method<span class="required"> *</span></p>
+                            <label class="choice"><input id="contact" name="contact" type="radio" value="phone" required aria-describedby="contact-method-help"> Phone</label>
+                            <label class="choice"><input id="contact" name="contact" type="radio" value="email" required aria-describedby="contact-method-help"> Email</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>F3 · Pet Selection</legend>
+                        <p class="help" id="pet-species-help">Please tell us about the pet you are interested in.</p>
+                        <label class="choice"><input type="radio" name="pet-type" value="cat" aria-describedby="pet-species-help" required> I want to adopt a cat</label>
+                        <label class="choice"><input type="radio" name="pet-type" value="dog" aria-describedby="pet-species-help" required> I want to adopt a dog</label>
+                        <p class="help" id="pet-choice-help">Do you already know which pet you would like to adopt?</p>
+                        
+                        <label class="inline-choice"> Yes, I know the pet I want</label>
+                        <input type="radio" name="specific-pet" value="yes" id="specific-pet-yes" aria-describedby="pet-choice-help" required>
+                        <label class="inline-choice"> No, I need help choosing</label>
+                        <input type="radio" name="specific-pet" value="no" id="specific-pet-no" aria-describedby="pet-choice-help" required>
+                        <div class="field pet-id-field"> <!-- This field is only shown when the user selects "Yes" for the specific pet question -->
+                            <p class="help" id="pet-id-help">Enter the pet ID number for the pet you are interested in.</p>
+                            <label for="pet-id">Pet Id</label>
+                            <input id="pet-id" name="pet-id" type="number" aria-describedby="pet-id-help" min="1" max="99">
+                        </div>
+                    </fieldset>
+                    <fieldset class="pet-details-field"> <!-- This field is only shown when the user selects "No" for the specific pet question -->
+                        <legend>F3 · Pet Details</legend>
+                        <p class="help">Please tell us a bit more about the type of pet you are looking for. Select all that apply.</p>
+                        <p class="question" id="gender-help">Do you have a gender preference for your new pet?</p>
+                        <label class="choice"><input type="checkbox" name="pet-gender-female" value="female" aria-describedby="gender-help"> Female</label>
+                        <label class="choice"><input type="checkbox" name="pet-gender-male" value="male" aria-describedby="gender-help"> Male</label>
+                        <p class="question" id="age-help">Do you have an age preference for your new pet?</p>
+                        <label class="choice"><input type="checkbox" name="pet-age-baby" value="baby" aria-describedby="age-help"> Baby</label>
+                        <label class="choice"><input type="checkbox" name="pet-age-young-adult" value="young-adult" aria-describedby="age-help"> Young Adult</label>
+                        <label class="choice"><input type="checkbox" name="pet-age-adult" value="adult" aria-describedby="age-help"> Adult</label>
+                        <label class="choice"><input type="checkbox" name="pet-age-senior" value="senior" aria-describedby="age-help"> Senior</label>
+                        <p class="question" id="fur-length-help">Do you have a fur length preference for your new pet?</p>
+                        <label class="choice"><input type="checkbox" name="fur-length-short" value="short" aria-describedby="fur-length-help"> Short</label>
+                        <label class="choice"><input type="checkbox" name="fur-length-medium" value="medium" aria-describedby="fur-length-help"> Medium</label>
+                        <label class="choice"><input type="checkbox" name="fur-length-long" value="long" aria-describedby="fur-length-help"> Long</label>
+                        <p class="question" id="temperament-help">What type of temperament are you looking for in your new pet?</p>
+                        <label class="choice"><input type="checkbox" name="temperament-friendly" value="friendly" aria-describedby="temperament-help"> Friendly</label>
+                        <label class="choice"><input type="checkbox" name="temperament-shy" value="shy" aria-describedby="temperament-help"> Shy</label>
+                        <label class="choice"><input type="checkbox" name="temperament-energetic" value="energetic" aria-describedby="temperament-help"> Energetic</label>
+                        <label class="choice"><input type="checkbox" name="temperament-calm" value="calm" aria-describedby="temperament-help"> Calm</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>F3 · Pet Compatibility</legend>
+                        <p class="help">To prevent compatibility issues, and ensure your new pet's happiness, 
+                            please answer the following questions.</p>
+                        <p id="other-pet-help" class="question">Do you have any other pets at home?<span class="required"> *</span></p>
+                        <label class="choice"><input type="radio" name="other-pet" value="yes" id="other-pet-yes" aria-describedby="other-pet-help" required> Yes</label>
+                        <label class="choice"><input type="radio" name="other-pet" value="no" id="other-pet-no" aria-describedby="other-pet-help" required> No</label>
+                        <p id="compatibility-help" class="question other-pet">What other type pets for you have? Check all that apply.<span class="required"> *</span></p>
+                        <label class="choice other-pet"><input type="checkbox" name="other-cat" value="cat" aria-describedby="compatibility-help"> Cat</label>
+                        <label class="choice other-pet"><input type="checkbox" name="other-dog" value="dog" aria-describedby="compatibility-help"> Dog</label>
+                        <label class="choice other-pet"><input type="checkbox" name="other-pet-other" value="other" aria-describedby="compatibility-help"> Other Species</label>
+                        <p class="question" id="children-help">Do you have children under 12 in the home? <span class="required"> *</span></p>
+                        <label class="choice"><input type="radio" name="children" value="yes" aria-describedby="children-help" required> Yes</label>
+                        <label class="choice"><input type="radio" name="children" value="no" aria-describedby="children-help" required> No</label>
+                    </fieldset>
                     <div class="field">
-                        <label for="name">Your Name<span class="required"> *</span></label>
-                        <input id="name" name="name" type="text" autocomplete="name" placeholder="Carl Crawler" aria-describedby="contact-info-help" required>
+                        <label for="meeting-date">Availability</label>
+                        <p class="help" id="meeting-date-help">Please tell us the days and times you are available to meet your new pet.</p>
+                        <input id="meeting-date" name="meeting-date" type="date" aria-describedby="meeting-date-help" min="2026-09-13">
                     </div>
                     <div class="field">
-                        <label for="email">Email Address<span class="required"> *</span></label>
-                        <input id="email" name="email" type="email" autocomplete="email" placeholder="carl.crawler@example.com" aria-describedby="contact-info-help" required>
+                        <label for="comments">Do you have any additional questions or comments that we can answer when we contact you?</label>
+                        <p class="help" id="comments-help">Please limit your response to 500 characters.</p>
+                        <textarea id="comments" name="comments" aria-describedby="comments-help" maxlength="500"></textarea>
                     </div>
-                    <div class="field">
-                        <label for="phone">Phone Number<span class="required"> *</span></label>
-                        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" aria-describedby="contact-info-help" required>
-                    </div>
-                    <div class="field">
-                        <p class="help" id="contact-method-help">Preferred Contact Method<span class="required"> *</span></p>
-                        <label class="choice"><input id="contact" name="contact" type="radio" value="phone" required aria-describedby="contact-method-help"> Phone</label>
-                        <label class="choice"><input id="contact" name="contact" type="radio" value="email" required aria-describedby="contact-method-help"> Email</label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>F3 · Pet Selection</legend>
-                    <p class="help" id="pet-species-help">Please tell us about the pet you are interested in.</p>
-                    <label class="choice"><input type="radio" name="pet-type" value="cat" aria-describedby="pet-species-help" required> I want to adopt a cat</label>
-                    <label class="choice"><input type="radio" name="pet-type" value="dog" aria-describedby="pet-species-help" required> I want to adopt a dog</label>
-                    <p class="help" id="pet-choice-help">Do you already know which pet you would like to adopt?</p>
-                    <label class="choice"><input type="radio" name="specific-pet" value="yes" id="specific-pet-yes" aria-describedby="pet-choice-help" required> Yes, I know the pet I want</label>
-                    <label class="choice"><input type="radio" name="specific-pet" value="no" id="specific-pet-no" aria-describedby="pet-choice-help" required> No, I need help choosing</label>
-                </fieldset>
-                <div class="field pet-id-field"> <!-- This field is only shown when the user selects "Yes" for the specific pet question -->
-                    <p class="help" id="pet-id-help">Enter the pet ID number for the pet you are interested in.</p>
-                    <label for="pet-id">Pet Id</label>
-                    <input id="pet-id" name="pet-id" type="number" aria-describedby="pet-id-help" min="1" max="99">
-                </div>
-                <fieldset class="pet-details-field"> <!-- This field is only shown when the user selects "No" for the specific pet question -->
-                    <legend>F3 · Pet Details</legend>
-                    <p class="help">Please tell us a bit more about the type of pet you are looking for. Select all that apply.</p>
-                    <p class="help" id="gender-help">Do you have a gender preference for your new pet?</p>
-                    <label class="choice"><input type="checkbox" name="pet-gender-female" value="female" aria-describedby="gender-help"> Female</label>
-                    <label class="choice"><input type="checkbox" name="pet-gender-male" value="male" aria-describedby="gender-help"> Male</label>
-                    <p class="help" id="age-help">Do you have an age preference for your new pet?</p>
-                    <label class="choice"><input type="checkbox" name="pet-age-baby" value="baby" aria-describedby="age-help"> Baby</label>
-                    <label class="choice"><input type="checkbox" name="pet-age-young-adult" value="young-adult" aria-describedby="age-help"> Young Adult</label>
-                    <label class="choice"><input type="checkbox" name="pet-age-adult" value="adult" aria-describedby="age-help"> Adult</label>
-                    <label class="choice"><input type="checkbox" name="pet-age-senior" value="senior" aria-describedby="age-help"> Senior</label>
-                    <p class="help" id="fur-length-help">Do you have a fur length preference for your new pet?</p>
-                    <label class="choice"><input type="checkbox" name="fur-length-short" value="short" aria-describedby="fur-length-help"> Short</label>
-                    <label class="choice"><input type="checkbox" name="fur-length-medium" value="medium" aria-describedby="fur-length-help"> Medium</label>
-                    <label class="choice"><input type="checkbox" name="fur-length-long" value="long" aria-describedby="fur-length-help"> Long</label>
-                    <p class="help" id="temperament-help">What type of temperament are you looking for in your new pet?</p>
-                    <label class="choice"><input type="checkbox" name="temperament-friendly" value="friendly" aria-describedby="temperament-help"> Friendly</label>
-                    <label class="choice"><input type="checkbox" name="temperament-shy" value="shy" aria-describedby="temperament-help"> Shy</label>
-                    <label class="choice"><input type="checkbox" name="temperament-energetic" value="energetic" aria-describedby="temperament-help"> Energetic</label>
-                    <label class="choice"><input type="checkbox" name="temperament-calm" value="calm" aria-describedby="temperament-help"> Calm</label>
-                </fieldset>
-                <fieldset>
-                    <legend>F3 · Pet Compatibility</legend>
-                    <p class="help">To prevent compatibility issues, and ensure your new pet's happiness, 
-                        please answer the following questions.</p>
-                    <p id="compatibility-help">Do you have any other pets at home? Check all that apply. <span class="required"> *</span></p>
-                    <label class="choice"><input type="checkbox" name="other-cat" value="cat" aria-describedby="compatibility-help"> Cat</label>
-                    <label class="choice"><input type="checkbox" name="other-dog" value="dog" aria-describedby="compatibility-help"> Dog</label>
-                    <label class="choice"><input type="checkbox" name="other-bird" value="bird" aria-describedby="compatibility-help"> Bird</label>
-                    <label class="choice"><input type="checkbox" name="other-pet" value="other" aria-describedby="compatibility-help"> Other species</label>
-                    <p class="help" id="children-help">Do you have children under 12 in the home? <span class="required"> *</span></p>
-                    <label class="choice"><input type="radio" name="children" value="yes" aria-describedby="children-help"> Yes</label>
-                    <label class="choice"><input type="radio" name="children" value="no" aria-describedby="children-help"> No</label>
-                </fieldset>
-                <div class="field">
-                    <label for="meeting-date">Availability</label>
-                    <p class="help" id="meeting-date-help">Please tell us the days and times you are available to meet your new pet.</p>
-                    <input id="meeting-date" name="meeting-date" type="date" aria-describedby="meeting-date-help" min="2026-09-13">
-                </div>
-                <div class="field">
-                    <label for="comments">Do you have any additional questions or comments that we can answer when we contact you?</label>
-                    <p class="help" id="comments-help">Please limit your response to 500 characters.</p>
-                    <textarea id="comments" name="comments" aria-describedby="comments-help" maxlength="500"></textarea>
-                </div>
-                <button type="submit">Meet Your Future Pet</button>
-            </form>
+                    <button type="submit">Meet Your Future Pet</button>
+                </form>
+            </section>
             <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
                     <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
+                    <div class="field default-sample card">
+                        <h3>Default</h3>
+                        <p>All fields are blank and ready for user input.</p>
+                        <label for="default-example">Email address</label>
+                        <input id="default-example" type="email" value="crawler.carl@example.com">
+                    </div>   
+                    <div class="field focus-sample card">
+                        <h3>Focus</h3>
+                        <p>Focused fields have a visual indicator showing they are selected for input.</p>
+                        <label for="focus-example">Email address</label>
+                        <input id="focus-example" type="email" value="crawler.carl@example.com" focus>
+                    </div>
+                    <div class="field required-sample card">
+                        <h3>Required</h3>
+                        <p>Required fields have a visual indicator showing they must be completed.</p>
+                        <label for="required-example">Email address</label>
+                        <input id="required-example" type="email" value="crawler.carl@example.com" required>
+                    </div>      
+                    <div class="field valid-sample card">
+                        <h3>Valid</h3>
+                        <p>Valid fields indicate they have been filled out correctly.</p>
+                        <label for="valid-example">Email address</label>
+                        <input id="valid-example" type="email" value="crawler.carl@example.com" aria-invalid="false">
+                    </div>
+                    <div class="field invalid-sample card">
+                        <h3>Invalid</h3>
+                        <p>Invalid fields indicate they have not been filled out correctly.</p>
+                        <label for="invalid-example">Email address</label>
+                        <input id="invalid-example" type="email" value="crawler.carl@example.com" aria-invalid="true">
+                    </div>
                     <div class="error-summary">
                         <h3>There is a problem with the fictional submission</h3>
                         <p><a href="#error-example">Email address needs attention</a></p>
                     </div>
                     <div class="field field-error">
                         <label for="error-example">Email address</label>
-                        <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
+                        <input id="error-example" type="email" value="crawler.carl@example.com" aria-invalid="true" aria-describedby="error-message">
                         <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
                     </div>
                     <button type="button" disabled>Disabled example</button>
