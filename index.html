@@ -54,14 +54,16 @@
                     </fieldset>
                     <fieldset id="pet-selection">
                         <legend>F3 · Pet Selection</legend>
-                        <p class="help" id="pet-species-help">Please tell us about the pet you are interested in.</p>
-                        <label class="choice"><input type="radio" name="pet-type" value="cat" aria-describedby="pet-species-help" required> I want to adopt a cat</label>
-                        <label class="choice"><input type="radio" name="pet-type" value="dog" aria-describedby="pet-species-help" required> I want to adopt a dog</label>
-                        <p class="help" id="pet-choice-help">Do you already know which pet you would like to adopt?</p>
+                        <div id="q1">
+                            <p class="help" id="pet-species-help">Please tell us about the pet you are interested in.</p>
+                            <label class="choice"><input type="radio" name="pet-type" value="cat" aria-describedby="pet-species-help" required> I want to adopt a cat</label>
+                            <label class="choice"><input type="radio" name="pet-type" value="dog" aria-describedby="pet-species-help" required> I want to adopt a dog</label>
+                            <p class="help" id="pet-choice-help">Do you already know which pet you would like to adopt?</p>
+                        </div>
                         <input type="radio" name="specific-pet" value="yes" id="specific-pet-yes" aria-describedby="pet-choice-help" required>
-                        <label class="inline-choice" for="specific-pet-yes"> Yes, I know the pet I want</label>
+                        <label for="specific-pet-yes" id="specific-pet-yes-label"> Yes, I know the pet I want</label>
                         <input type="radio" name="specific-pet" value="no" id="specific-pet-no" aria-describedby="pet-choice-help" required>
-                        <label class="inline-choice" for="specific-pet-no"> No, I need help choosing</label> 
+                        <label for="specific-pet-no" id="specific-pet-no-label"> No, I need help choosing</label> 
                         <div class="field pet-id-field"> <!-- This field is only shown when the user selects "Yes" for the specific pet question -->
                             <p class="help" id="pet-id-help">Enter the pet ID number for the pet you are interested in.</p>
                             <label for="pet-id">Pet Id</label>
@@ -71,43 +73,57 @@
                             <legend>F3 · Pet Details</legend>
                             <p class="help">Please tell us a bit more about the type of pet you are looking for. Select all that apply.</p>
                             <p class="question" id="gender-help">Do you have a gender preference for your new pet?</p>
-                            <label class="choice"><input type="checkbox" name="pet-gender-female" value="female" aria-describedby="gender-help"> Female</label>
-                            <label class="choice"><input type="checkbox" name="pet-gender-male" value="male" aria-describedby="gender-help"> Male</label>
+                            <div class="options">
+                                <label class="choice"><input type="checkbox" name="pet-gender-female" value="female" aria-describedby="gender-help"> Female</label>
+                                <label class="choice"><input type="checkbox" name="pet-gender-male" value="male" aria-describedby="gender-help"> Male</label>
+                            </div>
                             <p class="question" id="age-help">Do you have an age preference for your new pet?</p>
-                            <label class="choice"><input type="checkbox" name="pet-age-baby" value="baby" aria-describedby="age-help"> Baby</label>
-                            <label class="choice"><input type="checkbox" name="pet-age-young-adult" value="young-adult" aria-describedby="age-help"> Young Adult</label>
-                            <label class="choice"><input type="checkbox" name="pet-age-adult" value="adult" aria-describedby="age-help"> Adult</label>
-                            <label class="choice"><input type="checkbox" name="pet-age-senior" value="senior" aria-describedby="age-help"> Senior</label>
+                            <div class="options">
+                                <label class="choice"><input type="checkbox" name="pet-age-baby" value="baby" aria-describedby="age-help"> Baby</label>
+                                <label class="choice"><input type="checkbox" name="pet-age-young-adult" value="young-adult" aria-describedby="age-help"> Young Adult</label>
+                                <label class="choice"><input type="checkbox" name="pet-age-adult" value="adult" aria-describedby="age-help"> Adult</label>
+                                <label class="choice"><input type="checkbox" name="pet-age-senior" value="senior" aria-describedby="age-help"> Senior</label>
+                            </div>
                             <p class="question" id="fur-length-help">Do you have a fur length preference for your new pet?</p>
-                            <label class="choice"><input type="checkbox" name="fur-length-short" value="short" aria-describedby="fur-length-help"> Short</label>
-                            <label class="choice"><input type="checkbox" name="fur-length-medium" value="medium" aria-describedby="fur-length-help"> Medium</label>
-                            <label class="choice"><input type="checkbox" name="fur-length-long" value="long" aria-describedby="fur-length-help"> Long</label>
+                            <div class="options">
+                                <label class="choice"><input type="checkbox" name="fur-length-short" value="short" aria-describedby="fur-length-help"> Short</label>
+                                <label class="choice"><input type="checkbox" name="fur-length-medium" value="medium" aria-describedby="fur-length-help"> Medium</label>
+                                <label class="choice"><input type="checkbox" name="fur-length-long" value="long" aria-describedby="fur-length-help"> Long</label>
+                            </div>
                             <p class="question" id="temperament-help">What type of temperament are you looking for in your new pet?</p>
-                            <label class="choice"><input type="checkbox" name="temperament-friendly" value="friendly" aria-describedby="temperament-help"> Friendly</label>
-                            <label class="choice"><input type="checkbox" name="temperament-shy" value="shy" aria-describedby="temperament-help"> Shy</label>
-                            <label class="choice"><input type="checkbox" name="temperament-energetic" value="energetic" aria-describedby="temperament-help"> Energetic</label>
-                            <label class="choice"><input type="checkbox" name="temperament-calm" value="calm" aria-describedby="temperament-help"> Calm</label>
+                            <div class="options">
+                                <label class="choice"><input type="checkbox" name="temperament-friendly" value="friendly" aria-describedby="temperament-help"> Friendly</label>
+                                <label class="choice"><input type="checkbox" name="temperament-shy" value="shy" aria-describedby="temperament-help"> Shy</label>
+                                <label class="choice"><input type="checkbox" name="temperament-energetic" value="energetic" aria-describedby="temperament-help"> Energetic</label>
+                                <label class="choice"><input type="checkbox" name="temperament-calm" value="calm" aria-describedby="temperament-help"> Calm</label>
+                            </div>
                         </fieldset>
                     </fieldset>
                     <fieldset id="pet-compatibility">
                         <legend>F3 · Pet Compatibility</legend>
-                        <p class="help">To prevent compatibility issues, and ensure your new pet's happiness, 
-                            please answer the following questions.</p>
+                        <div id="q3">
+                            <p class="help">To prevent compatibility issues, and ensure your new pet's happiness, 
+                                please answer the following questions.</p>
+                            <p class="question" id="children-help">Do you have children under 12 in the home? <span class="required"> *</span></p>
+                        </div>
+                        <label class="choice" id="children-yes"><input type="radio" name="children" value="yes"  aria-describedby="children-help" required> Yes</label>
+                        <label class="choice" id="children-no"><input type="radio" name="children" value="no"  aria-describedby="children-help" required> No</label>
                         <p id="other-pet-help" class="question">Do you have any other pets at home?<span class="required"> *</span></p>
                         <input type="radio" name="other-pet" value="yes" id="other-pet-yes" aria-describedby="other-pet-help" required>
-                        <label class="inline-choice" for="other-pet-yes">Yes </label>
+                        <label class="inline-choice" for="other-pet-yes" id="other-pet-yes-label">Yes </label>
                         <input type="radio" name="other-pet" value="no" id="other-pet-no" aria-describedby="other-pet-help" required>
-                        <label class="inline-choice" for="other-pet-no">No </label>
+                        <label class="inline-choice" for="other-pet-no" id="other-pet-no-label">No </label>
                         <fieldset class="other-pets-field"> <!-- This field is only shown when the user selects "Yes" for the other pets question -->
                             <legend>Other Pets</legend>
                             <p id="compatibility-help" class="question">What other type pets for you have? Check all that apply.<span class="required"> *</span></p>
-                            <label class="choice"><input type="checkbox" name="other-cat" value="cat" aria-describedby="compatibility-help"> Cat</label>
-                            <label class="choice"><input type="checkbox" name="other-dog" value="dog" aria-describedby="compatibility-help"> Dog</label>
-                            <label class="choice"><input type="checkbox" name="other-pet-other" value="other" aria-describedby="compatibility-help"> Other Species</label>
+                            <div class="options">
+                                <label class="choice"><input type="checkbox" name="other-cat" value="cat" aria-describedby="compatibility-help"> Cat</label>
+                                <label class="choice"><input type="checkbox" name="other-dog" value="dog" aria-describedby="compatibility-help"> Dog</label>
+                                <label class="choice"><input type="checkbox" name="other-pet-other" value="other" aria-describedby="compatibility-help"> Other Species</label>
+                            </div>
                         </fieldset>
-                        <p class="question" id="children-help">Do you have children under 12 in the home? <span class="required"> *</span></p>
-                        <label class="choice"><input type="radio" name="children" value="yes" aria-describedby="children-help" required> Yes</label>
-                        <label class="choice"><input type="radio" name="children" value="no" aria-describedby="children-help" required> No</label>
+                        
+                        
                     </fieldset>
                     <div class="field">
                         <label for="meeting-date">Availability</label>
