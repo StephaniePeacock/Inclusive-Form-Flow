@@ -29,7 +29,8 @@
                    <br>
                    Princess Donut's Royal Companions will never share your personal information with third parties.</p>
             </section>
-            <section>
+            <section id="pet-application">
+                <h2>Application</h2>
                 <form action="" method="get">
                     <fieldset>
                         <legend>F3 · Contact Information</legend>
@@ -44,12 +45,12 @@
                         </div>
                         <div class="field">
                             <label for="phone">Phone Number<span class="required"> *</span></label>
-                            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" aria-describedby="contact-info-help" required>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="123-456-7890" aria-describedby="contact-info-help" pattern="^\d{10}$" required>
                         </div>
                         <div class="field">
                             <p class="help" id="contact-method-help">Preferred Contact Method<span class="required"> *</span></p>
-                            <label class="choice"><input id="contact" name="contact" type="radio" value="phone" required aria-describedby="contact-method-help"> Phone</label>
-                            <label class="choice"><input id="contact" name="contact" type="radio" value="email" required aria-describedby="contact-method-help"> Email</label>
+                            <label class="choice"><input id="contact-phone" name="contact" type="radio" value="phone" required aria-describedby="contact-method-help"> Phone</label>
+                            <label class="choice"><input id="contact-email" name="contact" type="radio" value="email" required aria-describedby="contact-method-help"> Email</label>
                         </div>
                     </fieldset>
                     <fieldset id="pet-selection">
@@ -65,9 +66,9 @@
                         <input type="radio" name="specific-pet" value="no" id="specific-pet-no" aria-describedby="pet-choice-help" required>
                         <label for="specific-pet-no" id="specific-pet-no-label"> No, I need help choosing</label> 
                         <div class="field pet-id-field"> <!-- This field is only shown when the user selects "Yes" for the specific pet question -->
-                            <p class="help" id="pet-id-help">Enter the pet ID number for the pet you are interested in.</p>
+                            <p class="help" id="pet-id-help">Enter the pet ID number for the pet you are interested in (1 - 99).</p>
                             <label for="pet-id">Pet Id</label>
-                            <input id="pet-id" name="pet-id" type="number" aria-describedby="pet-id-help" min="1" max="99">
+                            <input id="pet-id" name="pet-id" type="number" aria-describedby="pet-id-help" min="1" max="99" placeholder="">
                         </div>
                         <fieldset class="pet-details-field"> <!-- This field is only shown when the user selects "No" for the specific pet question -->
                             <legend>F3 · Pet Details</legend>
@@ -122,20 +123,19 @@
                                 <label class="choice"><input type="checkbox" name="other-pet-other" value="other" aria-describedby="compatibility-help"> Other Species</label>
                             </div>
                         </fieldset>
-                        
-                        
                     </fieldset>
                     <div class="field">
-                        <label for="meeting-date">Availability</label>
-                        <p class="help" id="meeting-date-help">Please tell us the days and times you are available to meet your new pet.</p>
-                        <input id="meeting-date" name="meeting-date" type="date" aria-describedby="meeting-date-help" min="2026-09-13">
+                        <p class="help" id="meeting-date-help">Please let us know the date you would like to come meet your future pet.</p>
+                        <label for="meeting-date">Date Requested<span class="required"> *</span></label>
+                        <input id="meeting-date" name="meeting-date" type="date" aria-describedby="meeting-date-help" min="2026-09-13" required>
                     </div>
+                    <br>
                     <div class="field">
                         <label for="comments">Do you have any additional questions or comments that we can answer when we contact you?</label>
                         <p class="help" id="comments-help">Please limit your response to 500 characters.</p>
-                        <textarea id="comments" name="comments" aria-describedby="comments-help" maxlength="500"></textarea>
+                        <textarea id="comments" name="comments" aria-describedby="comments-help" maxlength="500" placeholder=""></textarea>
                     </div>
-                    <button type="submit">Meet Your Future Pet</button>
+                    <button class="primary-button" type="submit">Meet Your Future Pet</button>
                 </form>
             </section>
             <section id="states">
@@ -147,44 +147,51 @@
                         <label for="default-example">Email address</label>
                         <input id="default-example" type="email" value="crawler.carl@example.com">
                     </div>   
+                    <hr>
                     <div class="field focus-sample card">
                         <h3>Focus</h3>
                         <p>Focused fields have a visual indicator showing they are selected for input.</p>
                         <label for="focus-example">Email address</label>
-                        <input id="focus-example" type="email" value="crawler.carl@example.com" focus>
+                        <input id="focus-example" type="email" value="crawler.carl@example.com">
+                        <button class="primary-button" type="button">Focus example</button>
                     </div>
+                    <hr>
                     <div class="field required-sample card">
                         <h3>Required</h3>
                         <p>Required fields have a visual indicator showing they must be completed.</p>
                         <label for="required-example">Email address</label>
                         <input id="required-example" type="email" value="crawler.carl@example.com" required>
-                    </div>      
+                    </div>  
+                    <hr>    
                     <div class="field valid-sample card">
                         <h3>Valid</h3>
                         <p>Valid fields indicate they have been filled out correctly.</p>
                         <label for="valid-example">Email address</label>
                         <input id="valid-example" type="email" value="crawler.carl@example.com" aria-invalid="false">
                     </div>
+                    <hr>
                     <div class="field invalid-sample card">
                         <h3>Invalid</h3>
                         <p>Invalid fields indicate they have not been filled out correctly.</p>
                         <label for="invalid-example">Email address</label>
                         <input id="invalid-example" type="email" value="crawler.carl@example.com" aria-invalid="true">
                     </div>
+                    <hr>
                     <div class="error-summary">
                         <h3>There is a problem with the fictional submission</h3>
                         <p><a href="#error-example">Email address needs attention</a></p>
                     </div>
                     <div class="field field-error">
                         <label for="error-example">Email address</label>
-                        <input id="error-example" type="email" value="crawler.carl@example.com" aria-invalid="true" aria-describedby="error-message">
+                        <input id="error-example" type="email" value="crawler.carl" aria-invalid="true" aria-describedby="error-message">
                         <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
                     </div>
-                    <button type="button" disabled>Disabled example</button>
+                    <button class="primary-button" type="button" disabled>Disabled example</button>
                 </section>
                 <section id="documentation">
                     <h2>F2 and F6 · Planning and Evidence</h2>
-                    <p>Link your field inventory, state matrix, fictional test-data list, completed test record, and AI disclosure.</p>
+                    <p><a href="field-inventory-template.html" target="_blank">Field Inventory</a></p>
+                        <p>All other documentation is included in this <a href="documentation.pdf" target="_blank">PDF</a>.</p>
                 </section>
             </main>
         </body>
